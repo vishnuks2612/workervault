@@ -1,0 +1,48 @@
+.hero {
+    position: relative;
+    height: 100vh; 
+    width: 100%;
+}
+
+.hero img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+.home-text {
+    text-align: center;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.home-text h1 {
+    margin-bottom: 10px; 
+    font-size: 3rem;
+    font-weight: 800;
+    background: #fff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.home-text p {
+    margin-bottom: 10px; 
+    font-size: 1.2rem;
+    color: #fff; 
+    padding: 0.5rem 0 2rem 0;
+}
+
+.home-text .look-button{
+    text-decoration: none;
+    background: #fff;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #222;
+}
