@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import './Assets/Register.css';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
@@ -24,14 +23,15 @@ const Register = () => {
   };
 
   const readValue = () => {
-    axios.post("", inputField)
-      .then((response)=> {
-  if (response.data.status === "User Added Successfully") {
-    navigate("/login");
-  } else {
-    alert("Provide Correct Data");
-  }
-});
+//     axios.post("", inputField)
+//       .then((response)=> {
+//   if (response.data.status === "User Added Successfully") {
+//     navigate("/login");
+//   } else {
+//     alert("Provide Correct Data");
+//   }
+// });
+console.log(inputField)
   };
 
 

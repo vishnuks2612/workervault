@@ -1,5 +1,4 @@
 import React from 'react'
-import './Assets/Home.css';
 import Navbar from './Navbar'
 
 const Home = () => {

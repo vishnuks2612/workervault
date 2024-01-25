@@ -32,21 +32,21 @@ const ViewNews = () => {
                     <div className="col">
                         <div className="row g-3">
                             {data.map((value, index) => {
-                                return <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 col-xxl-6 d-flex allign-items-stretch">
-                                    <div class="card text-center border shadow border-primary">
-                                        <h5 class="card-header">{value.title}</h5>
+                                return <div key={`news_${index}`} className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 col-xxl-6 d-flex allign-items-stretch ">
+                                    <div className="card text-center border shadow border-primary">
+                                        <h5 className="card-header">{value.title}</h5>
                                         <p>{value.author}</p>
-                                        <div class="card-body">
-                                            <h5 class="card-title">{value.description}</h5>
-                                            <p class="card-text">{value.content}</p>
-                                            <img src={value.urlToImage} class="card-img-top" alt="..."></img>
-                                            <a href={value.url} class="btn btn-primary">
+                                        <div className="card-body">
+                                            <h5 className="card-title">{value.description}</h5>
+                                            <p className="card-text">{value.content}</p>
+                                            <img src={value.urlToImage} className="card-img-top" alt="..."></img>
+                                            <a href={value.url} className="btn btn-primary">
                                                 See News
                                             </a>
                                         </div>
                                         <div className="card-footer">
                                             <p>Source: {value.source.name}</p>
-                                            <p class="">Published At: {value.publishedAt}</p>
+                                            <p className="">Published At: {value.publishedAt}</p>
                                         </div>
                                     </div>
                                 </div>
