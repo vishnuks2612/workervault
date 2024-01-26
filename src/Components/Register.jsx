@@ -38,34 +38,32 @@ const Register = () => {
   return (
     <div className='register-image'>
       <div className='wrapper'>
-        <form action=''>
-          <h1>Register</h1>
-          <div className="input-box">
-            <input type='text' name='name' placeholder='Name' value={inputField.name} onChange={inputHandler} required />
-          </div>
-          <div className="input-box">
-            <input type='text' name='phoneno' placeholder='Phone No' value={inputField.phoneno} onChange={inputHandler} required />
-          </div>
-          <div className="input-box">
-            <input type='email' name='emailid' placeholder='Email ID' value={inputField.emailid} onChange={inputHandler} required />
-          </div>
-          <div className="input-box">
-            <input type='text' name='address' placeholder='Address' value={inputField.address} onChange={inputHandler} required />
-          </div>
-          <div className="input-box">
-            <input type='text' name='gender' placeholder='Gender' value={inputField.gender} onChange={inputHandler} required />
-          </div>
-          <div className="input-box">
-            <input type='text' name='location' placeholder='Location' value={inputField.location} onChange={inputHandler} required />
-          </div>
-          <div className="input-box">
-            <input type='password' name='password' placeholder='Password' value={inputField.password} onChange={inputHandler} required />
-          </div>
-          <button type='submit' onClick={readValue}>Register</button>
-          <div className='register-link'>
-            <p>Already have an account?<a href='/'>Login</a></p>
-          </div>
-        </form>
+        <h1>Register</h1>
+        <div className="input-box">
+          <input type='text' name='name' placeholder='Name' value={inputField.name} onChange={inputHandler} required />
+        </div>
+        <div className="input-box">
+          <input type='text' name='phoneno' placeholder='Phone No' value={inputField.phoneno} onChange={inputHandler} required />
+        </div>
+        <div className="input-box">
+          <input type='email' name='emailid' placeholder='Email ID' value={inputField.emailid} onChange={inputHandler} required />
+        </div>
+        <div className="input-box">
+          <input type='text' name='address' placeholder='Address' value={inputField.address} onChange={inputHandler} required />
+        </div>
+        <div className="input-box">
+          <input type='text' name='gender' placeholder='Gender' value={inputField.gender} onChange={inputHandler} required />
+        </div>
+        <div className="input-box">
+          <input type='text' name='location' placeholder='Location' value={inputField.location} onChange={inputHandler} required />
+        </div>
+        <div className="input-box">
+          <input type='password' name='password' placeholder='Password' value={inputField.password} onChange={inputHandler} required />
+        </div>
+        <button type='submit' onClick={readValue}>Register</button>
+        <div className='register-link'>
+          <p>Already have an account?<Link href='/'>Login</Link></p>
+        </div>
       </div>
     </div>
   );

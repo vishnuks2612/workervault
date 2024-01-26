@@ -1,5 +1,5 @@
 import React from 'react'
-import AdminNavbar from './Components/AdminNavbar'
+import AdminNavbar from './AdminNavbar'
 
 const AdminViewQueries = () => {
   return (
