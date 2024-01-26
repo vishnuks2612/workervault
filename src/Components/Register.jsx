@@ -23,15 +23,14 @@ const Register = () => {
   };
 
   const readValue = () => {
-    //     axios.post("", inputField)
-    //       .then((response)=> {
-    //   if (response.data.status === "User Added Successfully") {
-    //     navigate("/login");
-    //   } else {
-    //     alert("Provide Correct Data");
-    //   }
-    // });
-    console.log(inputField);
+    axios.post("http://127.0.0.1:8000/api/register/", inputField)
+      .then((response)=> {
+  if (response.data.status === "User Added Successfully") {
+    navigate("/login");
+  } else {
+    alert("Provide Correct Data");
+  }
+});
   };
 
   return (
