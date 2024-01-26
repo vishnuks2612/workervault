@@ -24,7 +24,7 @@ const Register = () => {
 
   const readValue = () => {
     axios
-      .post("http://127.0.0.1:8000/user/register/", inputField)
+      .post("http://127.0.0.1:8000/api/register/", inputField)
       .then((response) => {
         if (response.data.status === "Success") {
           navigate("/");

@@ -4,12 +4,16 @@ import axios from 'axios'
 
 const AdminViewUsers = () => {
 
-    const [data, changeData] = useState([])
+    const [data, changeData] = useState([
+
+    ])
 
     const fetchData = () => {
-        axios.get("http://127.0.0.1:8000/user/userview/").then((response) => {
+        axios.post("http://127.0.0.1:8000/api/userview/").then((response) => {
             changeData(response.data)
+            console.log(response.data)
         })
+        
     }
 
     useEffect(() => { fetchData() }, [])
@@ -27,7 +31,7 @@ const AdminViewUsers = () => {
 
 
                             {data.map(
-                                (value, index)=>{
+                                (value, index) => {
 
                                     return <div className='col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3'>
 
