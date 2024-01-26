@@ -9,7 +9,7 @@ import AddNearNews from './Components/AddNearNews';
 import AdminHome from './Components/AdminHome';
 import AdminViewUsers from './Components/AdminViewUsers';
 import ContactUs from './Components/ContactUs';
-import AdminViewQueries from './AdminViewQueries';
+import AdminViewQueries from './Components/AdminViewQueries';
 
 function App() {
   return (
