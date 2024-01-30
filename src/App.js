@@ -10,6 +10,7 @@ import AdminHome from './Components/AdminHome';
 import AdminViewUsers from './Components/AdminViewUsers';
 import ContactUs from './Components/ContactUs';
 import AdminViewQueries from './Components/AdminViewQueries';
+import ViewNearNews from './Components/ViewNearNews';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <Route path='adminviewusers' element={<AdminViewUsers/>}></Route>
       <Route path='contactus' element={<ContactUs/>}></Route>
       <Route path='adminviewqueries' element={<AdminViewQueries/>}></Route>
+      <Route path='viewnearnews' element={<ViewNearNews/>}></Route>
     </Routes>
     </BrowserRouter>
   );
