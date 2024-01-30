@@ -39,30 +39,32 @@ const Register = () => {
     <div className='register-image'>
       <div className='wrapper'>
         <h1>Register</h1>
-        <div className="input-box">
-          <input type='text' name='name' placeholder='Name' value={inputField.name} onChange={inputHandler} required />
+        <form action="" className="needs-validation" novalidate>
+        <div className="input-box was-validated">
+          <input type='text' name='name' className="form-control" placeholder='Name' value={inputField.name} onChange={inputHandler} required />
         </div>
-        <div className="input-box">
-          <input type='text' name='phoneno' placeholder='Phone No' value={inputField.phoneno} onChange={inputHandler} required />
+        <div className="input-box was-validated">
+          <input type='number' name='phoneno' className="form-control" placeholder='Phone No' value={inputField.phoneno} onChange={inputHandler} required />
         </div>
-        <div className="input-box">
-          <input type='email' name='emailid' placeholder='Email ID' value={inputField.emailid} onChange={inputHandler} required />
+        <div className="input-box was-validated">
+          <input type='email' name='emailid' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" className="form-control" placeholder='Email ID' value={inputField.emailid} onChange={inputHandler} required />
         </div>
-        <div className="input-box">
-          <input type='text' name='address' placeholder='Address' value={inputField.address} onChange={inputHandler} required />
+        <div className="input-box was-validated">
+          <input type='text' name='address' className="form-control" placeholder='Address' value={inputField.address} onChange={inputHandler} required />
         </div>
-        <div className="input-box">
-          <input type='text' name='gender' placeholder='Gender' value={inputField.gender} onChange={inputHandler} required />
+        <div className="input-box was-validated">
+          <input type='text' name='gender' className="form-control" placeholder='Gender' value={inputField.gender} onChange={inputHandler} required />
         </div>
-        <div className="input-box">
-          <input type='text' name='location' placeholder='Location' value={inputField.location} onChange={inputHandler} required />
+        <div className="input-box was-validated">
+          <input type='text' name='location' className="form-control" placeholder='Location' value={inputField.location} onChange={inputHandler} required />
         </div>
-        <div className="input-box">
-          <input type='password' name='password' placeholder='Password' value={inputField.password} onChange={inputHandler} required />
+        <div className="input-box was-validated">
+          <input type='password' name='password' className="form-control" placeholder='Password' value={inputField.password} onChange={inputHandler} required />
         </div>
-        <button type='submit' onClick={readValue}>Register</button>
+        <button type='button' onClick={readValue}>Register</button>
+        </form>
         <div className='register-link'>
-          <p>Already have an account?<Link href='/'>Login</Link></p>
+          <p>Already have an account?<Link to='/'>Login</Link></p>
         </div>
       </div>
     </div>

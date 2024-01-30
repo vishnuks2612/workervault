@@ -18,7 +18,7 @@ const Login = () => {
             .then((response) => {
                 console.log(response.data);
                 if (response.data.length > 0) {
-                    const getUserId = response.data[0].id;
+                    const getUserId = response.data[0].userid;
                     const getName = response.data[0].name;
 
                     sessionStorage.setItem("userid", getUserId);
@@ -39,20 +39,22 @@ const Login = () => {
             <div className="wrapper">
                 <br></br>
                     <h1>Login</h1>
-                    <div className="input-box">
-                        <input type="text" placeholder="Username" name='emailid' value={inputField.emailid} onChange={inputHandler} required />
-                    </div>
-                    <div className="input-box">
-                        <input type="password" placeholder="Password" name='password' value={inputField.password} onChange={inputHandler} required />
-                    </div>
-                    <div className="remember-forgot">
-                        <label>
-                            <input type="checkbox" />
-                            Remember Me
-                        </label>
-                        <Link to="#">Forgot Password?</Link>
-                    </div>
-                    <button type="submit" onClick={readVal}>Login</button>
+                    <form action="" className='needs-validation' noValidate >
+                        <div className="input-box was-validated">
+                            <input className='form-control' type="text" placeholder="Username" name='emailid' value={inputField.emailid} onChange={inputHandler} required />
+                        </div>
+                        <div className="input-box was-validated">
+                            <input className='form-control' type="password" placeholder="Password" name='password' value={inputField.password} onChange={inputHandler} required />
+                        </div>
+                        <div className="remember-forgot">
+                            <label>
+                                <input type="checkbox" />
+                                Remember Me
+                            </label>
+                            <Link to="#">Forgot Password?</Link>
+                        </div>
+                        <button type="button" onClick={readVal}>Login</button>
+                    </form>
                     <div className="register-link">
                         <p>
                             Don't have an account?<Link to="/register">Register</Link>

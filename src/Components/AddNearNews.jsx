@@ -1,7 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./Navbar";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const AddNearNews = () => {
+
+  const [inputField, changeInputField] = useState({
+    title: "",
+    description: "",
+    image: "",
+    location: "",
+    content: "",
+  });
+
+
+  const navigate = useNavigate();
+
+  const inputHandler = (newEvent) => {
+    changeInputField({
+      ...inputField,
+      [newEvent.target.name]: newEvent.target.value,
+    });
+  };
+
+
+  const readValue = () => {
+    axios.post("http://127.0.0.1:8000/api/addnews/", inputField)
+      .then((response) => {
+        if (response.data.status === "Added") {
+          navigate("/nearnews");
+        } else {
+          alert("Failed")
+        }
+      });
+  };
+
+
   return (
     <div>
       <Navbar />
@@ -16,67 +50,46 @@ const AddNearNews = () => {
             <div className="row g-3">
               <div className="col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                 <label htmlFor="" className="form-label">
-                  Name:
-                </label>
-                <input type="text" className="form-control" />
-              </div>
-              <div className="col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                <label htmlFor="" className="form-label">
-                  Author:
-                </label>
-                <input type="text" className="form-control" />
-              </div>
-              <div className="col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                <label htmlFor="" className="form-label">
                   Title:
                 </label>
-                <input type="text" className="form-control" />
+                <input type="text" name="title" className="form-control" value={inputField.title} onChange={inputHandler} />
               </div>
-              <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+              <div className="col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                 <label htmlFor="" className="form-label">
                   Description:
                 </label>
-                <textarea
-                  name=""
-                  id=""
-                  cols="30"
-                  rows="10"
-                  className="form-control"
-                ></textarea>
+                <input type="text" name="description" className="form-control" value={inputField.description} onChange={{inputHandler}} />
               </div>
               <div className="col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                 <label htmlFor="" className="form-label">
-                  Url To Page:
+                  Location:
                 </label>
-                <input type="text" className="form-control" />
-              </div>
-              <div className="col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                <label htmlFor="" className="form-label">
-                  Url To Images:
-                </label>
-                <input type="text" className="form-control" />
-              </div>
-              <div className="col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                <label htmlFor="" className="form-label">
-                  Published At:
-                </label>
-                <input type="datetime-local" className="form-control" />
+                <input type="text" name="location" className="form-control" value={inputField.location} onChange={inputHandler} />
               </div>
               <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                 <label htmlFor="" className="form-label">
                   Content:
                 </label>
                 <textarea
-                  name=""
+                  name="content"
                   id=""
                   cols="30"
                   rows="10"
                   className="form-control"
+                  value={inputField.content}
+                  onChange={inputHandler}
                 ></textarea>
               </div>
+              <div className="col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                <label htmlFor="" className="form-label">
+                  Images:
+                </label>
+                <input type="file" name="image" className="form-control" value={inputField.image} onChange={inputHandler} />
+              </div>
+
 
               <div className="col col-12">
-                <button className="btn btn-primary">Submit</button>
+                <button type="button" onClick={readValue} className="btn btn-primary">Submit</button>
               </div>
             </div>
           </div>
