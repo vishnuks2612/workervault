@@ -7,7 +7,7 @@ const ViewNearNews = () => {
     const [data, changeData] = useState([]);
 
     const fetchData = () => {
-        axios.get("http://127.0.0.1:8000/api/viewnearnews/").then((response) => {
+        axios.post("http://127.0.0.1:8000/api/viewnearnews/").then((response) => {
             changeData(response.data)
         })
     }
@@ -18,6 +18,10 @@ const ViewNearNews = () => {
     return (
         <div>
             <Navbar />
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
 
             <div className='container'>
                 <div className='row'>
@@ -25,20 +29,26 @@ const ViewNearNews = () => {
                         <div className='row g-3'>
 
                             {data.map((value, index)=>{
-                                return <div className='col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3'>
-
-                                <div className='card'>
-
-                                    <ul className='list-group list-group-flush'>
-
-                                        <li className='list-group-item'>Title: {value.title}</li>
-                                        <li className='list-group-item'>Description: {value.descroption}</li>
-                                        <li className='list-group-item'>Image: {value.image}</li>
-                                        <li className='list-group-item'>Location: {value.location}</li>
-                                        <li className='list-group-item'>Content: {value.content}</li>
-                                    </ul>
+                                return <div
+                                className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 col-xxl-6 d-flex allign-items-stretch "
+                              >
+                                <div className="card text-center border shadow border-primary">
+                                  <h5 className="card-header">{value.title}</h5>
+                                  <div className="card-body">
+                                    <h5 className="card-title">{value.description}</h5>
+                                    <p className="card-text">{value.content}</p>
+                                    <img
+                                      src={value.image}
+                                      className="card-img-top"
+                                      alt="..."
+                                    ></img>
+                                    
+                                  </div>
+                                  <div className="card-footer">
+                                    <p>{value.location}</p>
+                                  </div>
                                 </div>
-                            </div>
+                              </div>
                             })}
 
                         </div>

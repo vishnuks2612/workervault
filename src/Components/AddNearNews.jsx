@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Navbar from "./Navbar";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import AdminNavbar from "./AdminNavbar";
 
 const AddNearNews = () => {
 
@@ -28,7 +28,7 @@ const AddNearNews = () => {
     axios.post("http://127.0.0.1:8000/api/addnews/", inputField)
       .then((response) => {
         if (response.data.status === "Added") {
-          navigate("/nearnews");
+          navigate("/viewnearnews");
         } else {
           alert("Failed")
         }
@@ -38,7 +38,7 @@ const AddNearNews = () => {
 
   return (
     <div>
-      <Navbar />
+      <AdminNavbar />
       <br />
       <br />
       <br />
@@ -58,7 +58,7 @@ const AddNearNews = () => {
                 <label htmlFor="" className="form-label">
                   Description:
                 </label>
-                <input type="text" name="description" className="form-control" value={inputField.description} onChange={{inputHandler}} />
+                <input type="text" name="description" className="form-control" value={inputField.description} onChange={inputHandler} />
               </div>
               <div className="col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                 <label htmlFor="" className="form-label">
@@ -84,7 +84,7 @@ const AddNearNews = () => {
                 <label htmlFor="" className="form-label">
                   Images:
                 </label>
-                <input type="file" name="image" className="form-control" value={inputField.image} onChange={inputHandler} />
+                <input type="text" name="image" className="form-control" value={inputField.image} onChange={inputHandler} />
               </div>
 
 

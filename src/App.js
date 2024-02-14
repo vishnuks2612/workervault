@@ -11,6 +11,7 @@ import AdminViewUsers from './Components/AdminViewUsers';
 import ContactUs from './Components/ContactUs';
 import AdminViewQueries from './Components/AdminViewQueries';
 import ViewNearNews from './Components/ViewNearNews';
+import AdminAddServices from './Components/AdminAddServices';
 
 function App() {
   return (
@@ -22,12 +23,13 @@ function App() {
       <Route path='register' element={<Register/>}></Route>
       <Route path='home' element={<Home/>}></Route>
       <Route path='viewnews' element={<ViewNews/>}></Route>
-      <Route path='addnearnews' element={<AddNearNews/>}></Route>
+      <Route path='addnews' element={<AddNearNews/>}></Route>
       <Route path='adminhome' element={<AdminHome/>}></Route>
       <Route path='adminviewusers' element={<AdminViewUsers/>}></Route>
       <Route path='contactus' element={<ContactUs/>}></Route>
       <Route path='adminviewqueries' element={<AdminViewQueries/>}></Route>
       <Route path='viewnearnews' element={<ViewNearNews/>}></Route>
+      <Route path='adminaddservices' element={<AdminAddServices/>}></Route>
     </Routes>
     </BrowserRouter>
   );

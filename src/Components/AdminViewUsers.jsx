@@ -22,6 +22,10 @@ const AdminViewUsers = () => {
     return (
         <div>
             <AdminNavbar />
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
 
 
             <div className='container'>

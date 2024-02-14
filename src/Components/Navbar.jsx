@@ -34,13 +34,13 @@ const Navbar = () => {
               </Link>
             </li>
             <li class="nav-item">
-              <Link class="nav-link" to="#">
+              <Link class="nav-link" to="/viewnearnews">
                 <i class="fa-solid fa-newspaper"></i>
                 Near Me
               </Link>
             </li>
             <li class="nav-item">
-              <Link class="nav-link" to="#">
+              <Link class="nav-link" to="/contactus">
                 <i class="fa-solid fa-address-book"></i>
                 Contact Us
               </Link>
@@ -69,12 +69,7 @@ const Navbar = () => {
                     Market YourSelf
                   </Link>
                 </li>
-                <li>
-                  <Link class="dropdown-item" to="/addnearnews">
-                    <i class="fa-solid fa-newspaper"></i>
-                    Add News
-                  </Link>
-                </li>
+                
                 <li>
                   <Link class="dropdown-item" to="#">
                     <i class="fa-solid fa-pen-to-square"></i>

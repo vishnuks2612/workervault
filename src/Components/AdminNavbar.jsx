@@ -38,9 +38,15 @@ const AdminNavbar = () => {
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="/adminaddservices">
                                         <i class="fa-solid fa-rectangle-ad"></i>
                                         Add Various Services
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/addnews">
+                                        <i class="fa-solid fa-rectangle-ad"></i>
+                                        Add News
                                     </a>
                                 </li>
                                 
