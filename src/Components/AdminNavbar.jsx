@@ -26,6 +26,12 @@ const AdminNavbar = () => {
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="/adminviewservices">
+                                <i class="fa-solid fa-address-book"></i>
+                                View Services
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="/adminviewqueries">
                                 <i class="fa-solid fa-address-card"></i>
                                 View Queries

@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
+import ContactUs from "./ContactUs";
 
 const Home = () => {
   return (
@@ -16,6 +17,8 @@ const Home = () => {
         <p>Select your needed worker</p>
         <button className="look-button">Look</button>
       </div>
+
+      <ContactUs/>
     </div>
   );
 };
