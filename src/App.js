@@ -13,7 +13,6 @@ import AdminViewQueries from './Components/AdminViewQueries';
 import ViewNearNews from './Components/ViewNearNews';
 import AdminAddServices from './Components/AdminAddServices';
 import AdminViewServiceList from './Components/AdminViewServiceList';
-import Messages from './Components/Messages';
 
 function App() {
   return (
