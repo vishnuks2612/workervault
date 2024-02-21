@@ -50,3 +50,31 @@
     color: #fff;
     border-radius: 4px;
 }
+
+
+/* 
+body:before{
+    content: "";
+    position: absolute;
+    inset: 40% -60% 0 -60%;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+nav{
+    position: relative;
+    z-index: none;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+nav.before .nav-item-element {
+
+    transform: rotatey(180deg);
+} */

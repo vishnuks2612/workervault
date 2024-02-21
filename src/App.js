@@ -13,6 +13,7 @@ import AdminViewQueries from './Components/AdminViewQueries';
 import ViewNearNews from './Components/ViewNearNews';
 import AdminAddServices from './Components/AdminAddServices';
 import AdminViewServiceList from './Components/AdminViewServiceList';
+import Messages from './Components/Messages';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
       <Route path='viewnearnews' element={<ViewNearNews/>}></Route>
       <Route path='adminaddservices' element={<AdminAddServices/>}></Route>
       <Route path='adminviewservices' element={<AdminViewServiceList/>}></Route>
+
     </Routes>
     </BrowserRouter>
   );
