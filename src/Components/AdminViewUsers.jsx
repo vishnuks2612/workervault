@@ -46,6 +46,7 @@ const AdminViewUsers = () => {
                                                 <li className='list-group-item'>Name: {value.name}</li>
                                                 <li className='list-group-item'>Phone no: {value.phoneno}</li>
                                                 <li className='list-group-item'>Email ID: {value.emailid}</li>
+                                                <li className='list-group-item'>Job: {value.job}</li>
                                                 <li className='list-group-item'>Address: {value.address}</li>
                                                 <li className='list-group-item'>Gender: {value.gender}</li>
                                                 <li className='list-group-item'>Location: {value.location}</li>

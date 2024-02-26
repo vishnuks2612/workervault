@@ -53,6 +53,9 @@ const Register = () => {
           <input type='text' name='address' className="form-control" placeholder='Address' value={inputField.address} onChange={inputHandler} required />
         </div>
         <div className="input-box was-validated">
+          <input type='text' name='job' className="form-control" placeholder='Job' value={inputField.job} onChange={inputHandler} required />
+        </div>
+        <div className="input-box was-validated">
           <input type='text' name='gender' className="form-control" placeholder='Gender' value={inputField.gender} onChange={inputHandler} required />
         </div>
         <div className="input-box was-validated">
