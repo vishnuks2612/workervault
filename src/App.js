@@ -13,6 +13,11 @@ import AdminViewQueries from './Components/AdminViewQueries';
 import ViewNearNews from './Components/ViewNearNews';
 import AdminAddServices from './Components/AdminAddServices';
 import AdminViewServiceList from './Components/AdminViewServiceList';
+import SeekerHome from './Components/SeekerHome';
+import SeekerLogin from './Components/SeekerLogin';
+import SeekerViewNearNews from './Components/SeekerViewNearNews';
+import SeekerViewNews from './Components/SeekerViewNews';
+import SeekerContactUs from './Components/SeekerContactUs';
 
 function App() {
   return (
@@ -32,6 +37,11 @@ function App() {
       <Route path='viewnearnews' element={<ViewNearNews/>}></Route>
       <Route path='adminaddservices' element={<AdminAddServices/>}></Route>
       <Route path='adminviewservices' element={<AdminViewServiceList/>}></Route>
+      <Route path='seekershome' element={<SeekerHome/>}></Route>
+      <Route path='seekerlogin' element={<SeekerLogin/>}></Route>
+      <Route path='seekerviewnearnews' element={<SeekerViewNearNews/>}></Route>
+      <Route path='seekerviewnews' element={<SeekerViewNews/>}></Route>
+      <Route path='seekercontactus' element={<SeekerContactUs/>}></Route>
 
     </Routes>
     </BrowserRouter>
