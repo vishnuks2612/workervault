@@ -20,6 +20,7 @@ import SeekerViewNews from './Components/SeekerViewNews';
 import SeekerContactUs from './Components/SeekerContactUs';
 import SeekerRegister from './Components/SeekerRegister';
 import LandingPage from './Components/LandingPage';
+import Chat from './Components/Chat';
 
 
 function App() {
@@ -47,6 +48,10 @@ function App() {
       <Route path='seekercontactus' element={<SeekerContactUs/>}></Route>
       <Route path='seekerregister' element={<SeekerRegister/>}></Route>
       <Route path='' element={<LandingPage/>}></Route>
+
+
+
+      <Route path='chat' element={<Chat/>}></Route>
 
     </Routes>
     </BrowserRouter>
