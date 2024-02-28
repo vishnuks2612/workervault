@@ -18,6 +18,9 @@ import SeekerLogin from './Components/SeekerLogin';
 import SeekerViewNearNews from './Components/SeekerViewNearNews';
 import SeekerViewNews from './Components/SeekerViewNews';
 import SeekerContactUs from './Components/SeekerContactUs';
+import SeekerRegister from './Components/SeekerRegister';
+import LandingPage from './Components/LandingPage';
+
 
 function App() {
   return (
@@ -25,7 +28,7 @@ function App() {
 
     <Routes>
 
-      <Route path='' element={<Login/>}></Route>
+      <Route path='login' element={<Login/>}></Route>
       <Route path='register' element={<Register/>}></Route>
       <Route path='home' element={<Home/>}></Route>
       <Route path='viewnews' element={<ViewNews/>}></Route>
@@ -42,6 +45,8 @@ function App() {
       <Route path='seekerviewnearnews' element={<SeekerViewNearNews/>}></Route>
       <Route path='seekerviewnews' element={<SeekerViewNews/>}></Route>
       <Route path='seekercontactus' element={<SeekerContactUs/>}></Route>
+      <Route path='seekerregister' element={<SeekerRegister/>}></Route>
+      <Route path='' element={<LandingPage/>}></Route>
 
     </Routes>
     </BrowserRouter>

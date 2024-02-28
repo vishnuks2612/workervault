@@ -54,7 +54,7 @@ const SeekerLogin = () => {
                 </form>
                 <div className="register-link">
                     <p>
-                        Don't have an account?<Link to="/workerregister">Register</Link>
+                        Don't have an account?<Link to="/seekerregister">Register</Link>
                     </p>
                 </div>
             </div>
