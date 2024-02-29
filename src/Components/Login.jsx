@@ -17,16 +17,16 @@ const Login = () => {
             .post("http://127.0.0.1:8000/api/login/", inputField)
             .then((response) => {
                 console.log(response.data);
-                if (response.data.length > 0) {
-                    const getUserId = response.data[0].userid;
-                    const getName = response.data[0].name;
+                // if (response.data.length > 0) {
+                //     const getUserId = response.data[0].userid;
+                //     const getName = response.data[0].name;
 
-                    sessionStorage.setItem("userid", getUserId);
-                    sessionStorage.setItem("name", getName);
-                    navigate("/home");
-                } else {
-                    alert("invalid data");
-                }
+                //     sessionStorage.setItem("userid", getUserId);
+                //     sessionStorage.setItem("name", getName);
+                //     navigate("/home");
+                // } else {
+                //     alert("invalid data");
+                // }
             });
     };
 

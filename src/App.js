@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './Components/Login';
@@ -14,13 +13,8 @@ import ViewNearNews from './Components/ViewNearNews';
 import AdminAddServices from './Components/AdminAddServices';
 import AdminViewServiceList from './Components/AdminViewServiceList';
 import SeekerHome from './Components/SeekerHome';
-import SeekerLogin from './Components/SeekerLogin';
-import SeekerViewNearNews from './Components/SeekerViewNearNews';
-import SeekerViewNews from './Components/SeekerViewNews';
-import SeekerContactUs from './Components/SeekerContactUs';
-import SeekerRegister from './Components/SeekerRegister';
-import LandingPage from './Components/LandingPage';
 import Chat from './Components/Chat';
+import JobAdd from './Components/JobAdd';
 
 
 function App() {
@@ -29,7 +23,7 @@ function App() {
 
     <Routes>
 
-      <Route path='login' element={<Login/>}></Route>
+      <Route path='' element={<Login/>}></Route>
       <Route path='register' element={<Register/>}></Route>
       <Route path='home' element={<Home/>}></Route>
       <Route path='viewnews' element={<ViewNews/>}></Route>
@@ -42,12 +36,7 @@ function App() {
       <Route path='adminaddservices' element={<AdminAddServices/>}></Route>
       <Route path='adminviewservices' element={<AdminViewServiceList/>}></Route>
       <Route path='seekershome' element={<SeekerHome/>}></Route>
-      <Route path='seekerlogin' element={<SeekerLogin/>}></Route>
-      <Route path='seekerviewnearnews' element={<SeekerViewNearNews/>}></Route>
-      <Route path='seekerviewnews' element={<SeekerViewNews/>}></Route>
-      <Route path='seekercontactus' element={<SeekerContactUs/>}></Route>
-      <Route path='seekerregister' element={<SeekerRegister/>}></Route>
-      <Route path='' element={<LandingPage/>}></Route>
+      <Route path='jobadd' element={<JobAdd/>}></Route>
 
 
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
@@ -7,7 +7,7 @@ const Register = () => {
     name: "",
     phoneno: "",
     emailid: "",
-    job: "",
+    role: "",
     address: "",
     gender: "",
     location: "",
@@ -28,24 +28,12 @@ const Register = () => {
       .post("http://127.0.0.1:8000/api/register/", inputField)
       .then((response) => {
         if (response.data.status === "Success") {
-          navigate("/login");
+          navigate("/");
         } else {
           alert("Failed");
         }
       });
   };
-
-  const [data, changeData] = useState([]);
-
-  const fetchData = () => {
-    axios.post("http://127.0.0.1:8000/api/viewservicelist/").then(
-      (response) => {
-        changeData(response.data)
-      }
-    )
-  }
-
-  useEffect(() => { fetchData() }, [])
 
 
   return (
@@ -65,6 +53,20 @@ const Register = () => {
           <div className="input-box was-validated">
             <input type='text' name='address' className="form-control" placeholder='Address' value={inputField.address} onChange={inputHandler} required />
           </div>
+
+          <div className="input-box was-validated">
+            <select
+              name="role"
+              className="form-control"
+              value={inputField.role}
+              onChange={inputHandler}
+              required
+            >
+              <option value="">Select Role</option>
+              <option value="Employee">Employee</option>
+              <option value="Employer">Employer</option>
+            </select>
+          </div>
           
           <div className="input-box was-validated">
             <select
@@ -81,23 +83,7 @@ const Register = () => {
             </select>
           </div>
 
-          <div className="input-box was-validated">
-            <select
-              name="job"
-              className="form-control"
-              value={inputField.job}
-              onChange={inputHandler}
-              required
-            >
-              <option value="">Select Job</option>
-              {data.map((value, index)=>{
-                return (
-                  <option>{value.job_name}</option>
-                )
-              })}
-
-            </select>
-          </div>
+          
 
 
           <div className="input-box was-validated">
@@ -109,7 +95,7 @@ const Register = () => {
           <button type='button' onClick={readValue}>Register</button>
         </form>
         <div className='register-link'>
-          <p>Already have an account?<Link to='/login'>Login</Link></p>
+          <p>Already have an account?<Link to='/'>Login</Link></p>
         </div>
       </div>
     </div>

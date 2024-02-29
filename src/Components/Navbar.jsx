@@ -64,7 +64,7 @@ const Navbar = () => {
               </Link>
               <ul class="dropdown-menu">
                 <li>
-                  <Link class="dropdown-item" to="#">
+                  <Link class="dropdown-item" to="/jobadd">
                     <i class="fa-solid fa-rectangle-ad"></i>
                     Market YourSelf
                   </Link>
