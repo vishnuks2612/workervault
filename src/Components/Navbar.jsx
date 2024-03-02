@@ -77,6 +77,12 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
+                  <Link class="dropdown-item" to="/chat">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    Chat
+                  </Link>
+                </li>
+                <li>
                   <hr class="dropdown-divider" />
                 </li>
                 <li>

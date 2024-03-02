@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import Navbar from "./Navbar";
 
 
 const JobAdd = () => {
 
     const [inputField, changeInputField] = useState({
         job: "",
+
+        userid: sessionStorage.getItem("userid"),
+
     });
 
     const navigate = useNavigate();
@@ -19,11 +23,12 @@ const JobAdd = () => {
     };
 
     const readValue = () => {
+        console.log(inputField);
         axios
-            .post("http://127.0.0.1:8000/api/register/", inputField)
+            .put("http://127.0.0.1:8000/api/AddJob/", inputField)
             .then((response) => {
-                if (response.data.status === "Success") {
-                    navigate("/jobadd");
+                if (response.data.status === "Job Added") {
+                    navigate("/home");
                 } else {
                     alert("Failed");
                 }
@@ -48,6 +53,14 @@ const JobAdd = () => {
 
     return (
         <div>
+
+            <Navbar/>
+            
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+
             <div className="input-box was-validated">
                 <select
                     name="job"

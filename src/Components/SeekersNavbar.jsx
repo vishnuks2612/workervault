@@ -65,7 +65,7 @@ const SeekersNavbar = () => {
                             </Link>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <Link class="dropdown-item" to="#">
+                                    <Link class="dropdown-item" to="/findworker">
                                         <i class="fa-solid fa-rectangle-ad"></i>
                                         Find Workers
                                     </Link>

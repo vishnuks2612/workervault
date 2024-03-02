@@ -4,10 +4,14 @@ import ZChatInput from './ZChatInput'
 
 const ZChat = () => {
   return (
+    
     <div className='zchat'>
       <div className="chatInfo">
         <span>Athul</span>
       </div>
+
+     
+      
 
       <ZChatMessages/>
 

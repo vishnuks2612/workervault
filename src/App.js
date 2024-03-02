@@ -15,6 +15,7 @@ import AdminViewServiceList from './Components/AdminViewServiceList';
 import SeekerHome from './Components/SeekerHome';
 import Chat from './Components/Chat';
 import JobAdd from './Components/JobAdd';
+import FindWorkers from './Components/FindWorkers';
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
       <Route path='adminviewservices' element={<AdminViewServiceList/>}></Route>
       <Route path='seekershome' element={<SeekerHome/>}></Route>
       <Route path='jobadd' element={<JobAdd/>}></Route>
+      <Route path='findworker' element={<FindWorkers/>}></Route>
 
 
 
