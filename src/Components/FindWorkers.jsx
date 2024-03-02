@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import SeekersNavbar from './SeekersNavbar'
+import { Link } from 'react-router-dom';
 
 const FindWorkers = () => {
 
@@ -19,10 +20,10 @@ const FindWorkers = () => {
     useEffect(() => { fetchData() }, [])
 
     const [inputField, changeInputField] = useState({
-        job: "",
+        job: "Farmer",
     });
 
-
+    const [uId, setUserId] = useState(0);
     const inputHandler = (newEvent) => {
         changeInputField({
             ...inputField,
@@ -31,7 +32,7 @@ const FindWorkers = () => {
     };
 
 
-    const [search, setSearch] = useState([{ "userid": 13, "name": "King", "phoneno": 4546, "emailid": "admin@gmail.com", "role": "", "job": "Farmer", "address": "idukki", "gender": "Male", "location": "Kuttikkanam", "password": "1234" },])
+    const [search, setSearch] = useState([])
 
     const readvalue = () => {
         console.log(inputField)
@@ -68,13 +69,15 @@ const FindWorkers = () => {
 
                 </select>
                 <button type='button' className='btn' onClick={readvalue}>Search</button>
+                <br></br>
             </div>
-            <div className="flex flex-wrap justify-center">
+            <div className='d-flex'>
             {search.map((value, index) => {
+                const linkUrl = `${value.userid}`;
               return (
                 <div
                   key={`search_${index}`}
-                  className="col col-12 col-sm-6 col-md-3 col-lg-4 col-xl-3 col-xxl-3 card-group"
+                  className="col col-12 col-sm-6 col-md-3 col-lg-4 col-xl-3 col-xxl-3 m-1 card-group"
                 >
                   <div className="card team-item">
                     <div className="text-center px-5 py-3">
@@ -83,6 +86,18 @@ const FindWorkers = () => {
                       <p>{value.emailid}</p>
                       <p>{value.address}</p>
                       <p>{value.location}</p>
+
+
+                      <Link
+                          to={'/chat'}
+                          onClick={(ev) => {
+                            setUserId(value.userid);
+                            sessionStorage.setItem("recieverid", linkUrl);
+                            console.log(linkUrl)
+                          }}
+                          className="btn"
+                          type="button"
+                        >Chat</Link>
                       
                     </div>
                   </div>

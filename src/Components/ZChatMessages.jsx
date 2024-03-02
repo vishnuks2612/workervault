@@ -5,8 +5,7 @@ const ZChatMessages = () => {
   return (
     <div className='zchatmessages'>
         <ZChatMessage/>
-        <ZChatMessage/>
-        <ZChatMessage/>
+
     </div>
   )
 }
