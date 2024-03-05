@@ -1,6 +1,8 @@
 import React from "react";
 import Navbar from "./Navbar";
 import ContactUs from "./ContactUs";
+import { Link } from "react-router-dom";
+
 
 const Home = () => {
   return (
@@ -14,11 +16,13 @@ const Home = () => {
       </div>
       <div className="home-text">
         <h1>Find Your Needs</h1>
-        <p>Select your needed worker</p>
-        <button className="look-button">Look</button>
+        <p>Select your Job</p>
+        <li className="btn">
+                    <Link className="look-button" to="/jobadd">
+                        Market Yourself
+                    </Link>
+                </li>
       </div>
-
-      <ContactUs/>
     </div>
   );
 };

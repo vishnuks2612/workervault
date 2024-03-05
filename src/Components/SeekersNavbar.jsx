@@ -28,8 +28,8 @@ const SeekersNavbar = () => {
                                 Home
                             </Link>
                         </li>
-                        <li classNameName="nav-item">
-                            <Link classNameName="nav-link">
+                        <li className="nav-item">
+                            <Link className="nav-link btn">
                                 {sessionStorage.getItem("name")}
                             </Link>
                         </li>

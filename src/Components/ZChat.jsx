@@ -11,7 +11,7 @@ const ZChat = () => {
         <span>Athul</span>
       </div>
 
-      <ZChatMessages />
+      <ZChatMessages userId={userId}/>
 
       <ZChatInput userId={userId}/>
     </div>

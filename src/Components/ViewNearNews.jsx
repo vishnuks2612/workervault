@@ -30,7 +30,7 @@ const ViewNearNews = () => {
 
                             {data.map((value, index)=>{
                                 return <div
-                                className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 col-xxl-6 d-flex allign-items-stretch "
+                                className="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6"
                               >
                                 <div className="card text-center border shadow border-primary">
                                   <h5 className="card-header">{value.title}</h5>

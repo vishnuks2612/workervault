@@ -77,9 +77,15 @@ const FindWorkers = () => {
                                     <p>{value.address}</p>
                                     <p>{value.location}</p>
                                     {/* Pass the userId to the Chat component */}
+                                    
+                                    <Link
+                                        to={`/feedback/${value.userid}`}
+                                        className="btn btn-primary"
+                                        type="button"
+                                    >Feedback</Link>
                                     <Link
                                         to={`/chat/${value.userid}`}
-                                        className="btn"
+                                        className="btn  btn-primary"
                                         type="button"
                                     >Chat</Link>
                                 </div>

@@ -14,6 +14,17 @@ const AdminViewServiceList = () => {
         )
     }
 
+    const deletePost = (id) => {
+        axios
+            .delete("http://127.0.0.1:8000/api/deleteView/?id=" + id)
+            .then((response) => {
+                alert(response.data.status);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    };
+
     useEffect(() => { fetchData() }, [])
 
 
@@ -40,11 +51,14 @@ const AdminViewServiceList = () => {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {data.map((value, index)=>{
+                                        {data.map((value, index) => {
                                             return (
                                                 <tr>
                                                     <td>{value.job_id}</td>
                                                     <td>{value.job_name}</td>
+                                                    <td><button className='btn btn-danger' onClick={() => {
+                                                        deletePost(value.job_id);
+                                                    }}>Delete</button></td>
                                                 </tr>
                                             );
                                         })}

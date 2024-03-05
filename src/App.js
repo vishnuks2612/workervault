@@ -20,6 +20,7 @@ import SeekerViewNews from './Components/SeekerViewNews';
 import SeekerViewNearNews from './Components/SeekerViewNearNews';
 import Feedback from './Components/Feedback';
 import AdminLogin from './Components/AdminLogin';
+import EditProfile from './Components/EditProfile';
 
 
 
@@ -46,11 +47,12 @@ function App() {
       <Route path='findworker' element={<FindWorkers/>}></Route>
       <Route path='seekerviewnews' element={<SeekerViewNews/>}></Route>
       <Route path='seekervviewnearnews' element={<SeekerViewNearNews/>}></Route>
-      <Route path='feedback' element={<Feedback/>}></Route>
       <Route path='adminlogin' element={<AdminLogin/>}></Route>
+      <Route path='editprofile' element={<EditProfile/>}></Route>
 
 
 
+      <Route path='feedback/:userId' element={<Feedback/>}></Route>
       <Route path='chat/:userId' element={<Chat/>}></Route>
 
     </Routes>

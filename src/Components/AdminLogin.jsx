@@ -43,7 +43,7 @@ return (
     <div>
         <section className="vh-100 gradient-custom">
             <div className="container py-5 h-100">
-                <div classNameName="row d-flex justify-content-center align-items-center h-100">
+                <div className="row d-flex justify-content-center align-items-center h-100">
                     <div className="col-12 col-md-8 col-lg-6 col-xl-5">
                         <div className="card bg-dark text-white" >
                             <div className="card-body p-5 text-center">
@@ -54,17 +54,17 @@ return (
                                     <p className="text-white-50 mb-5">Please enter your login and password!</p>
 
                                     <div className="form-outline form-white mb-4">
-                                        <input type="email" id="typeEmailX" className="form-control form-control-lg" />
-                                        <label className="form-label" for="typeEmailX">Username</label>
+                                        <input type="email" id="typeEmailX" name='username' value={inputField.username} onChange={inputHandler} className="form-control form-control-lg" />
+                                        <label className="form-label" htmlFor="typeEmailX">Username</label>
                                     </div>
 
                                     <div className="form-outline form-white mb-4">
-                                        <input type="password" id="typePasswordX" className="form-control form-control-lg" />
-                                        <label className="form-label" for="typePasswordX">Password</label>
+                                        <input type="password" name='password' value={inputField.password} onChange={inputHandler} id="typePasswordX" className="form-control form-control-lg" />
+                                        <label className="form-label" htmlFor="typePasswordX">Password</label>
                                     </div>
 
 
-                                    <button className="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+                                    <button onClick={readVal} className="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
 
 
 
