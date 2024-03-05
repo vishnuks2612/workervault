@@ -3,12 +3,13 @@ import ZChatNavbar from './ZChatNavbar'
 import ZChatSearch from './ZChatSearch'
 import ZChats from './ZChats'
 
-const ZChatSidebar = () => {
+const ZChatSidebar = ({userId}) => {
+
   return (
     <div className='sidebar'>
-        <ZChatNavbar/>
+        <ZChatNavbar />
         <ZChatSearch/>
-        <ZChats/>
+        <ZChats userId={userId}/>
     </div>
   )
 }

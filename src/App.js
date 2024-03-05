@@ -16,6 +16,11 @@ import SeekerHome from './Components/SeekerHome';
 import Chat from './Components/Chat';
 import JobAdd from './Components/JobAdd';
 import FindWorkers from './Components/FindWorkers';
+import SeekerViewNews from './Components/SeekerViewNews';
+import SeekerViewNearNews from './Components/SeekerViewNearNews';
+import Feedback from './Components/Feedback';
+import AdminLogin from './Components/AdminLogin';
+
 
 
 function App() {
@@ -39,10 +44,14 @@ function App() {
       <Route path='seekershome' element={<SeekerHome/>}></Route>
       <Route path='jobadd' element={<JobAdd/>}></Route>
       <Route path='findworker' element={<FindWorkers/>}></Route>
+      <Route path='seekerviewnews' element={<SeekerViewNews/>}></Route>
+      <Route path='seekervviewnearnews' element={<SeekerViewNearNews/>}></Route>
+      <Route path='feedback' element={<Feedback/>}></Route>
+      <Route path='adminlogin' element={<AdminLogin/>}></Route>
 
 
 
-      <Route path='chat' element={<Chat/>}></Route>
+      <Route path='chat/:userId' element={<Chat/>}></Route>
 
     </Routes>
     </BrowserRouter>

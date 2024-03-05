@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 const SeekersNavbar = () => {
     return (
 
-        <nav class="navbar navbar-expand-lg ">
-            <div class="container-fluid">
-                <Link class="navbar-brand" to="#">
+        <nav className="navbar navbar-expand-lg ">
+            <div className="container-fluid">
+                <Link className="navbar-brand" to="#">
                     WorkerVaulT
                 </Link>
                 <button
-                    class="navbar-toggler"
+                    className="navbar-toggler"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent"
@@ -18,71 +18,76 @@ const SeekersNavbar = () => {
                     aria-expanded="false"
                     aria-label="Toggle navigation"
                 >
-                    <span class="navbar-toggler-icon"></span>
+                    <span className="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <Link class="nav-link active" aria-current="page" to="/seekershome">
-                                <i class="fa-solid fa-tv"></i>
+                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li className="nav-item">
+                            <Link className="nav-link active" aria-current="page" to="/seekershome">
+                                <i className="fa-solid fa-tv"></i>
                                 Home
                             </Link>
                         </li>
-                        <li class="nav-item">
-                            <Link class="nav-link" to="/seekerviewnews">
-                                <i class="fa-solid fa-newspaper"></i>
+                        <li classNameName="nav-item">
+                            <Link classNameName="nav-link">
+                                {sessionStorage.getItem("name")}
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/seekerviewnews">
+                                <i className="fa-solid fa-newspaper"></i>
                                 News
                             </Link>
                         </li>
-                        <li class="nav-item">
-                            <Link class="nav-link" to="/seekerviewnearnews">
-                                <i class="fa-solid fa-newspaper"></i>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/seekerviewnearnews">
+                                <i className="fa-solid fa-newspaper"></i>
                                 Near Me
                             </Link>
                         </li>
-                        <li class="nav-item">
-                            <Link class="nav-link" to="/seekercontactus">
-                                <i class="fa-solid fa-address-book"></i>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/seekercontactus">
+                                <i className="fa-solid fa-address-book"></i>
                                 Contact Us
                             </Link>
                         </li>
-                        <li class="nav-item">
-                            <Link class="nav-link" to="#">
-                                <i class="fa-solid fa-address-card"></i>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="#">
+                                <i className="fa-solid fa-address-card"></i>
                                 About
                             </Link>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li className="nav-item dropdown">
                             <Link
-                                class="nav-link dropdown-toggle"
+                                className="nav-link dropdown-toggle"
                                 to="#"
                                 role="button"
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
                             >
-                                <i class="fa-solid fa-user"></i>
+                                <i className="fa-solid fa-user"></i>
                                 profile
                             </Link>
-                            <ul class="dropdown-menu">
+                            <ul className="dropdown-menu">
                                 <li>
-                                    <Link class="dropdown-item" to="/findworker">
-                                        <i class="fa-solid fa-rectangle-ad"></i>
+                                    <Link className="dropdown-item" to="/findworker">
+                                        <i className="fa-solid fa-rectangle-ad"></i>
                                         Find Workers
                                     </Link>
                                 </li>
 
                                 <li>
-                                    <Link class="dropdown-item" to="#">
-                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    <Link className="dropdown-item" to="#">
+                                        <i className="fa-solid fa-pen-to-square"></i>
                                         Edit Profile
                                     </Link>
                                 </li>
                                 <li>
-                                    <hr class="dropdown-divider" />
+                                    <hr className="dropdown-divider" />
                                 </li>
                                 <li>
-                                    <Link class="dropdown-item" to="#">
-                                        <i class="fa-solid fa-right-from-bracket"></i>
+                                    <Link className="dropdown-item" to="#">
+                                        <i className="fa-solid fa-right-from-bracket"></i>
                                         Logout
                                     </Link>
                                 </li>

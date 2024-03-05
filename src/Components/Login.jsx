@@ -59,18 +59,15 @@ const Login = () => {
                     <div className="input-box was-validated">
                         <input className='form-control' type="password" placeholder="Password" name='password' value={inputField.password} onChange={inputHandler} required />
                     </div>
-                    <div className="remember-forgot">
-                        <label>
-                            <input type="checkbox" />
-                            Remember Me
-                        </label>
-                        <Link to="#">Forgot Password?</Link>
-                    </div>
+                    
                     <button type="button" onClick={readVal}>Login</button>
                 </form>
                 <div className="register-link">
                     <p>
                         Don't have an account?<Link to="/register">Register</Link>
+                    </p>
+                    <p>
+                        <Link to="/adminlogin">Admin</Link>
                     </p>
                 </div>
             </div>

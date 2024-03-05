@@ -52,7 +52,7 @@ const JobAdd = () => {
     useEffect(() => { fetchData() }, [])
 
     return (
-        <div>
+        <div className="jobadd">
 
             <Navbar/>
             
@@ -78,7 +78,7 @@ const JobAdd = () => {
 
                 </select>
             </div>
-            <button type='button' onClick={readValue}>Add</button>
+            <button className="jobadd_button" type='button' onClick={readValue}>Add</button>
         </div>
     )
 }

@@ -1,13 +1,15 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 
 
-const ZChatInput = () => {
+const ZChatInput = ({userId}) => {
+    // console.log("recieierjfcd",userId)
 
     const [inputField, changeInputField] = useState({
         "description": "",
         "name": sessionStorage.getItem("userid"),
-        "reciever_name": sessionStorage.getItem("recieverid"), // Initialize reciever_name as null
+        "reciever_name": userId // Initialize reciever_name as null
       });
 
 
@@ -20,13 +22,11 @@ const ZChatInput = () => {
 
     const readvalue = () => {
         console.log(inputField)
-        // axios.post("http://127.0.0.1:8000/api/findWorkers/", inputField).then((response) => {
-        //   setSearch(response.data)
-        //   console.log(response.data)
-        // });
+        axios.post("http://127.0.0.1:8000/api/saveChat/", inputField).then((response) => {
+          console.log(response.data)
+          alert(response.data.status)
+        });
     };
-
-    let { userId } = useParams();
 
     // Update reciever_name in inputField state
     useEffect(() => {
