@@ -61,7 +61,7 @@ const JobAdd = () => {
             <br></br>
             <br></br>
 
-            <div className="input-box was-validated">
+            <div className="input-box was-validated wrapper">
                 <select
                     name="job"
                     className="form-control"

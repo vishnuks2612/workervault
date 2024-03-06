@@ -20,8 +20,10 @@ const AdminViewUsers = () => {
 
 
     return (
-        <div>
+        <div className='hero'>
+            
             <AdminNavbar />
+            
             <br></br>
             <br></br>
             <br></br>
@@ -29,6 +31,7 @@ const AdminViewUsers = () => {
 
 
             <div className='container'>
+                
                 <div className='row'>
                     <div className='col'>
                         <div className='row g-3'>

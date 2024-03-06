@@ -37,7 +37,7 @@ const AdminViewServiceList = () => {
             <br></br>
             <br></br>
 
-            <div className='container'>
+            <div className='container '>
                 <div className='row'>
                     <div className='col'>
                         <div className='row g-3'>
