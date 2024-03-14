@@ -2,10 +2,9 @@ import React, { useState, useEffect, useRef } from "react";
 import { formatDistanceToNow } from "date-fns";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import "./UserChat.css";
-import Navbar from "../Navbar/Navbar";
-import FileIcon from "./FileIcon";
-import Avatar from "./Avatar";
+// import "./UserChat.css";
+// import FileIcon from "./FileIcon";
+// import Avatar from "./Avatar";
 
 const UserChat = () => {
   const { userid, job_id } = useParams();
@@ -112,7 +111,7 @@ const UserChat = () => {
 
 return (
     <div>
-      <Navbar />
+      
       <br />
       <div className="chat-interface">
         <div className="chat-header">WhatsApp Chat</div>
@@ -128,13 +127,14 @@ return (
             >
               <div className="avatar-container">
                 {message.sender !== sessionStorage.getItem("id")}
-                <Avatar imageUrl="https://png.pngtree.com/png-vector/20220709/ourmid/pngtree-businessman-user-avatar-wearing-suit-with-red-tie-png-image_5809521.png" />
+{/*                 
+                <Avatar imageUrl="https://png.pngtree.com/png-vector/20220709/ourmid/pngtree-businessman-user-avatar-wearing-suit-with-red-tie-png-image_5809521.png" /> */}
               </div>
               <div className="message-content">
                 {message.text && <p>{message.text}</p>}
                 {message.file && (
                   <div className="file-message">
-                    <FileIcon />
+                    {/* <FileIcon /> */}
 
                     {/* Assuming 'file' contains the URL to the file */}
                     <a href={message.file} download>
