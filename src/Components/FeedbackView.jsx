@@ -5,23 +5,10 @@ const FeedbackView = () => {
 
     const [input, setInput] = useState({ "reciever_name": 1 })
 
-    const [data, changeData] = useState(
-        [{
-            "id": 1, "sender": {
-                "userid": 2, "name": "Alfin", "phoneno": 56765675, "emailid": "kunchu@gmail.com", "role":
-                    "Employee", "job": "Home Nurse", "address": "idukki", "gender": "Male", "location": "Kuttikkanam", "password": "1234"
-            },
-            "feedback": "test", "sender_name": 2, "reciever_name": 1
-        }, {
-            "id": 2, "sender": {
-                "userid": 2, "name": "Alfin", "phoneno":
-                    56765675, "emailid": "kunchu@gmail.com", "role": "Employee", "job": "Home Nurse", "address": "idukki", "gender": "Male",
-                "location": "Kuttikkanam", "password": "1234"
-            }, "feedback": "test", "sender_name": 2, "reciever_name": 1
-        }]
-    )
+    const [data, changeData] = useState([])
 
     const fetchData = () => {
+        console.log(input)
         axios.post("http://127.0.0.1:8000/api/viewFeedback/", input).then((response) => {
             changeData(response.data)
             console.log(response.data)

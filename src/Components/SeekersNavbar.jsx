@@ -28,7 +28,7 @@ const SeekersNavbar = () => {
                                 Home
                             </Link>
                         </li>
-                        <li className="nav-item">
+                        <li className="nav-item" to="/editprofile">
                             <Link className="nav-link btn">
                                 {sessionStorage.getItem("name")}
                             </Link>
@@ -77,7 +77,7 @@ const SeekersNavbar = () => {
                                 </li>
 
                                 <li>
-                                    <Link className="dropdown-item" to="#">
+                                    <Link className="dropdown-item" to="/editprofile">
                                         <i className="fa-solid fa-pen-to-square"></i>
                                         Edit Profile
                                     </Link>

@@ -14,7 +14,7 @@ const SeekerHome = () => {
                 />
             </div>
             <div className="home-text">
-                <h1>Find Your Needs</h1>
+                <h1>Explore Skilled Workers For You</h1>
                 <p>Select your needed worker</p>
                 <li className="btn">
                     <Link className=" look-button" to="/findworker">

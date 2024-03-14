@@ -15,7 +15,7 @@ const Home = () => {
         />
       </div>
       <div className="home-text">
-        <h1>Find Your Needs</h1>
+        <h1>Showcase Your Skills</h1>
         <p>Select your Job</p>
         <li className="btn">
                     <Link className="look-button" to="/jobadd">
