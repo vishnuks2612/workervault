@@ -17,7 +17,7 @@ const UserChat = () => {
   useEffect(() => {
     // Retrieve messages from localStorage on component mount
     const storedMessages = localStorage.getItem(
-      chatMessages_${job_id}_${userid}_${sessionStorage.getItem("id")}
+      `chatMessages_${job_id}_${userid}_${sessionStorage.getItem("id")}`
     );
     if (storedMessages) {
       setMessages(JSON.parse(storedMessages));
@@ -32,7 +32,7 @@ const UserChat = () => {
   const saveMessagesToLocalStorage = (messages) => {
     // Save messages to localStorage
     localStorage.setItem(
-      chatMessages_${job_id}_${userid}_${sessionStorage.getItem("id")},
+      `chatMessages_${job_id}_${userid}_${sessionStorage.getItem("id")}`,
       JSON.stringify(messages)
     );
   };
@@ -95,7 +95,7 @@ const UserChat = () => {
       try {
         const receiverId = sessionStorage.getItem("id");
         const response = await axios.get(
-          http://127.0.0.1:8000/get_emp_messages/${receiverId}/${job_id}/${userid}
+          `http://127.0.0.1:8000/get_emp_messages/${receiverId}/${job_id}/${userid}`
         );
         const receivedMessages = response.data;
 

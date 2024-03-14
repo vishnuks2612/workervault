@@ -21,6 +21,7 @@ import SeekerViewNearNews from './Components/SeekerViewNearNews';
 import Feedback from './Components/Feedback';
 import AdminLogin from './Components/AdminLogin';
 import EditProfile from './Components/EditProfile';
+import UserChat from './Components/UserChat';
 
 
 
@@ -54,6 +55,8 @@ function App() {
 
       <Route path='feedback/:userId' element={<Feedback/>}></Route>
       <Route path='chat/:userId' element={<Chat/>}></Route>
+
+      <Route path='userchat' element={<UserChat/>}></Route>
 
     </Routes>
     </BrowserRouter>
