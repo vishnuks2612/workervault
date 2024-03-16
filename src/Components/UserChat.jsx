@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { formatDistanceToNow } from "date-fns";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-// import "./UserChat.css";
+import "./UserChat.css";
 // import FileIcon from "./FileIcon";
 // import Avatar from "./Avatar";
 
@@ -114,7 +114,7 @@ return (
       
       <br />
       <div className="chat-interface">
-        <div className="chat-header">WhatsApp Chat</div>
+        <div className="chat-header">Chat</div>
         <div className="chat-history" ref={chatHistoryRef}>
           {messages.map((message, index) => (
             <div
@@ -126,9 +126,8 @@ return (
               }
             >
               <div className="avatar-container">
-                {message.sender !== sessionStorage.getItem("id")}
-{/*                 
-                <Avatar imageUrl="https://png.pngtree.com/png-vector/20220709/ourmid/pngtree-businessman-user-avatar-wearing-suit-with-red-tie-png-image_5809521.png" /> */}
+                {message.sender !== sessionStorage.getItem("id")} 
+                {/* <Avatar imageUrl="https://png.pngtree.com/png-vector/20220709/ourmid/pngtree-businessman-user-avatar-wearing-suit-with-red-tie-png-image_5809521.png" /> */}
               </div>
               <div className="message-content">
                 {message.text && <p>{message.text}</p>}
