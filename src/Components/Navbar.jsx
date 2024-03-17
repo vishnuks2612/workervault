@@ -83,7 +83,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/chat">
+                  <Link className="dropdown-item" to="/userchat">
                     <i className="fa-solid fa-pen-to-square"></i>
                     Chat
                   </Link>
