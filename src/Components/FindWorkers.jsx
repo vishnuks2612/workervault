@@ -42,13 +42,13 @@ const FindWorkers = () => {
     };
 
     return (
-        <div>
+        <div className='find-workers'>
             <SeekersNavbar />
             <br /><br /><br /><br />
             <div>
                 <select
                     name="job"
-                    className="form-control"
+                    className="form-control col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"
                     value={inputField.job}
                     onChange={inputHandler}
                     required
@@ -58,7 +58,7 @@ const FindWorkers = () => {
                         <option key={index_data} value={value.job_name}>{value.job_name}</option>
                     ))}
                 </select>
-                <button type='button' className='btn' onClick={readvalue}>Search</button>
+                <button type='button' className='btn btn-primary' onClick={readvalue}>Search</button>
                 <br />
             </div>
             <div className='d-flex'>

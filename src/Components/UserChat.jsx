@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { formatDistanceToNow } from "date-fns";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import "./UserChat.css";
+// import "./UserChat.css";
 // import FileIcon from "./FileIcon";
 // import Avatar from "./Avatar";
 

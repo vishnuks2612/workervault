@@ -1,0 +1,12 @@
+.find-workers{
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-smoothing: grayscale;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('./addservices.jpeg') no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
