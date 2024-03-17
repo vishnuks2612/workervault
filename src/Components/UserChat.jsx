@@ -84,10 +84,10 @@ const UserChat = () => {
     }
   };
 
-  const handleFileChange = (event) => {
-    const selectedFile = event.target.files[0];
-    setFile(selectedFile);
-  };
+  // const handleFileChange = (event) => {
+  //   const selectedFile = event.target.files[0];
+  //   setFile(selectedFile);
+  // };
 
   useEffect(() => {
     const fetchReceivedMessages = async () => {
@@ -115,6 +115,7 @@ return (
       <br />
       <div className="chat-interface">
         <div className="chat-header">Chat</div>
+        
         <div className="chat-history" ref={chatHistoryRef}>
           {messages.map((message, index) => (
             <div
@@ -159,7 +160,7 @@ return (
             value={newMessage}
             onChange={(e) => setNewMessage(e.target.value)}
           />
-          <input type="file" onChange={handleFileChange} />
+          {/* <input type="file" onChange={handleFileChange} /> */}
           <button onClick={handleSendMessage}>Send</button>
         </div>
       </div>

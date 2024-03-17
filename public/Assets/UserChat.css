@@ -120,9 +120,10 @@
     margin-right: 10px;
   }
   
-  input[type="file"] {
+  /* input[type="file"] {
     margin-right: 10px;
-  }
+  } */
+  
   button {
     padding: 10px;
     background-color: #2196f3;

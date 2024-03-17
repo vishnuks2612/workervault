@@ -56,7 +56,7 @@ function App() {
       <Route path='feedback/:userId' element={<Feedback/>}></Route>
       {/* <Route path='chat/:userId' element={<Chat/>}></Route> */}
 
-      <Route path='userchat/:userId' element={<UserChat/>}></Route>
+      <Route path='userchat' element={<UserChat/>}></Route>
 
     </Routes>
     </BrowserRouter>
