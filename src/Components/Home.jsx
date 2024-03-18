@@ -3,7 +3,6 @@ import Navbar from "./Navbar";
 import ContactUs from "./ContactUs";
 import { Link } from "react-router-dom";
 
-
 const Home = () => {
   return (
     <div>
@@ -18,10 +17,10 @@ const Home = () => {
         <h1>Showcase Your Skills</h1>
         <p>Select your Job</p>
         <li className="btn">
-                    <Link className="look-button" to="/jobadd">
-                        Market Yourself
-                    </Link>
-                </li>
+          <Link className="look-button" to="/jobadd">
+            Market Yourself
+          </Link>
+        </li>
       </div>
     </div>
   );

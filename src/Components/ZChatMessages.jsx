@@ -1,13 +1,12 @@
-import React from 'react'
-import ZChatMessage from './ZChatMessage'
+import React from "react";
+import ZChatMessage from "./ZChatMessage";
 
-const ZChatMessages = () => {
+const ZChatMessages = ({ userId }) => {
   return (
-    <div className='zchatmessages'>
-        <ZChatMessage/>
-
+    <div className="zchatmessages">
+      <ZChatMessage userId={userId} />
     </div>
-  )
-}
+  );
+};
 
-export default ZChatMessages
+export default ZChatMessages;

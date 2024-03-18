@@ -29,9 +29,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item" to="/editprofile">
-              <Link className="nav-link">
-                {sessionStorage.getItem("name")}
-              </Link>
+              <Link className="nav-link">{sessionStorage.getItem("name")}</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/viewnews">
@@ -75,7 +73,7 @@ const Navbar = () => {
                     Market YourSelf
                   </Link>
                 </li>
-                
+
                 <li>
                   <Link className="dropdown-item" to="/editprofile">
                     <i className="fa-solid fa-pen-to-square"></i>
@@ -83,7 +81,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/userchat">
+                  <Link className="dropdown-item" to="/chatemployee">
                     <i className="fa-solid fa-pen-to-square"></i>
                     Chat
                   </Link>
@@ -92,17 +90,17 @@ const Navbar = () => {
                   <hr className="dropdown-divider" />
                 </li>
                 <li>
-                <Link
-                className="btn"
-                  onClick={(ev) => {
-                    ev.stopPropagation();
-                    ev.preventDefault();
-                    sessionStorage.clear();
-                    navigate("/");
-                  }}
-                >
-                  LOGOUT
-                </Link>
+                  <Link
+                    className="btn"
+                    onClick={(ev) => {
+                      ev.stopPropagation();
+                      ev.preventDefault();
+                      sessionStorage.clear();
+                      navigate("/");
+                    }}
+                  >
+                    LOGOUT
+                  </Link>
                 </li>
               </ul>
             </li>
